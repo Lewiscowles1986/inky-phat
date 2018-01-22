@@ -73,7 +73,7 @@ def set_rotation(r):
 
     """
     r = r % 360
-    _panel.set_image(_panel.get_image().rotate(r))
+    set_image(get_image().rotate(r))
 
 def set_border(col):
     """Set panel border colour.
