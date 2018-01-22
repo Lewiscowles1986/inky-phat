@@ -72,12 +72,8 @@ def set_rotation(r):
     :param r: Rotation in degrees, can be either 0 or 180
 
     """
-    if r == 180:
-        _panel.h_flip = True
-        _panel.v_flip = False
-    else:
-        _panel.h_flip = False
-        _panel.v_flip = True
+    r = r % 360
+    _panel.set_image(_panel.get_image().rotate(r))
 
 def set_border(col):
     """Set panel border colour.
